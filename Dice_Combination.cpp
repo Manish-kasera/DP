@@ -5,13 +5,13 @@ int main()
 {
     int mod = 1e9 + 7;
 
-    int n;
-    cin >> n;
+    int target;
+    cin >> target;
 
-    vector<int> dp(n + 1, 0);
+    vector<int> dp(target + 1, 0);
     dp[0] = 1;
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= target; i++)
     {
         for (int j = 1; j <= 6 && i - j >= 0; j++)
         {
@@ -19,6 +19,6 @@ int main()
         }
 
     }
-    cout<<dp[n]<<endl;
+    cout<<dp[target]<<endl;
     return 0;
 }
